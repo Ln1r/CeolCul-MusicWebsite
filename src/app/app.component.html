@@ -1,0 +1,90 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img onclick="window.scrollTo(0, document.getElementById('home'))"
+    width="40"
+    alt="Treble Logo"
+    src="data:image/png;base64,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">
+
+  <button class="logo" onclick="window.scrollTo(0, document.getElementById('home'))" style="background-color:teal">CeolCúl</button>
+  <div>
+    <button onclick="window.scrollTo(0, document.getElementById('music').offsetTop)">Music</button>
+    <button onclick="window.scrollTo(0, document.getElementById('discussions').offsetTop)">Discussions</button>
+
+  </div>
+    <div class="spacer"></div>
+    <button class="add"  (click)="showAddDiscussion()" 
+      onclick="window.scrollTo(0, document.getElementById('add-Discussion').offsetTop)" >Add Discussion</button>
+    <button class="add"  (click)="showAddTune()" 
+      onclick="window.scrollTo(0, document.getElementById('add-Tune').offsetTop)">Add Tune</button>
+</div>
+
+<!-- Image Header -->
+<div class="img-container" id="home">
+  <img class="session-img" src="/assets//tradSession.jpg" alt="Trad Session">
+    <div class="centered"><b>See you at the Session!</b></div>
+</div>
+
+<!-- Instrument Container -->
+<div class="content">
+  <div class="container" id="music">
+    <h1 style="text-align:center"> INSTRUMENTS </h1>
+    <p style="text-align:center; font-size:19px;">Tunes Inside</p>
+
+    <button id ="instrument-btn" (click)="tuneListComponent.harpTune()">
+      <img src="assets/icons/harp-img.svg" alt="My Icon"><br>
+      <span><b>Harp Tunes</b></span>
+    </button>
+
+    <button id ="instrument-btn" (click)="tuneListComponent.fiddleTune()">
+      <img src="assets/icons/fiddle-img.svg" alt="My Icon"><br>
+      <span><b>Fiddle Tunes</b></span>
+    </button>
+
+    <button id ="instrument-btn" (click)="tuneListComponent.accordionTune()">
+      <img src="assets/icons/accordion-img.svg" alt="My Icon"><br>
+      <span><b>Accordion Tunes</b></span>
+    </button>
+    <!-- CALL TO SHOW TUNES -->
+    <app-tunes-list></app-tunes-list>
+  </div>
+
+  <!-- ADD TUNE CALL!! -->
+  <div class = "container" id="add-Tune">
+    <div *ngIf="addTuneVisible">
+      <app-add-tune [addTuneVisible]="addTuneVisible"></app-add-tune>
+      <p></p>
+    </div>
+  </div>
+  
+  <!-- ADD DISCUSSIONS AND DISCUSSION CALL -->
+  <div class="container" id="discussions">
+    <h1 style="text-align:center">DISCUSSIONS</h1>
+    <p style="text-align:center; font-size:19px;">Lets Have a Chat</p>
+      <app-discussion></app-discussion>
+  </div>
+  <div class="container" id="add-Discussion">
+    <div *ngIf="addDiscussionVisible">
+      <app-add-discussion (discussionsAdded)="onDiscussionAdded($event)"></app-add-discussion>
+    </div>
+  </div>
+  
+  <br><br>
+    <!-- Footer -->
+    <footer>
+      <a href="https://icons8.com/icon/GgALV7LjQj0u/treble-clef">Treble Clef icon by Icons8</a>
+      <br>
+      <a href="https://icons8.com/icon/uNzfBrxgK8aN/violin">Violin icon by Icons8</a>
+    </footer>
+  
+    <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
+      <title>Gray Clouds Background</title>
+      <path id="Path_39" data-name="Path 39" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,
+        9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,
+        5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,
+        0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" transform="translate(142.69 -634.312)" fill="#eee"/>
+    </svg>
+</div>

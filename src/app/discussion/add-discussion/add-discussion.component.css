@@ -1,0 +1,36 @@
+.add-discussion{
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 15px
+}
+form{
+  background-color: white;
+}
+.form-header {
+  padding: 10px;
+  background-color: teal;
+  color: white;
+  border-radius: 5px 5px 0 0;
+}
+.form-group {
+  padding: 10px;
+  /* background-color: rgba(255,255,204,.9); */
+  background-color: white
+} label{
+  font-size: 20px
+}input{
+  width: 400px; 
+  height: 30px;
+}textarea{
+  width: 400px;
+  height: 40px;
+}
+button{
+  padding: 8px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  background-color: #fc3;
+  border-radius: 5px 5px 5px 5px;
+} button:hover{
+  opacity: 0.8;
+}

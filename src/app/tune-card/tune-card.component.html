@@ -1,0 +1,20 @@
+<div class="card-header">
+    <h2>{{ tuneDetails.name }}</h2> {{ tuneDetails.type }}
+</div>
+
+<div class="card-body">
+    <div style="text-decoration: underline"><h3>Different Names of the Tune:</h3></div>
+    <div class="manifest-item" *ngFor="let alias of tuneDetails?.aliases">{{ alias }}</div>
+  
+    <div style="text-decoration: underline"><h3>Tune notation:</h3></div>
+    <ol>
+      <li *ngFor="let setting of tuneDetails?.settings; let i=index" [attr.id]="'note-' + i">
+        {{ setting.key }}<br>
+        <div class="sheet-music-container">
+          <div id="sheet-music-{{i}}" #sheetMusic></div>
+        </div>
+        <app-star-rating [tuneId]="tuneDetails.id" [starIdPrefix]="starIdPrefix + i"></app-star-rating>
+        <br><br>
+      </li>
+    </ol>
+</div>

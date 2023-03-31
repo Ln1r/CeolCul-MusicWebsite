@@ -1,0 +1,57 @@
+button{
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #fc3;
+    /* border-bottom: 1px solid #ddd; */
+    border-radius: 5px 5px 5px 5px;
+  }
+ button:hover{
+    opacity: 0.8;
+ }
+
+ .card {
+   margin: 20px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .card-container{
+   width: 100%;
+ }
+ .card-header {
+   padding: 10px;
+   background-color: #fc3;
+   border-bottom: 1px solid #ddd;
+   border-radius: 5px 5px 0 0;
+ }
+ .card-body {
+   padding: 10px;
+   background-color: rgba(255,255,204,.9);
+ }
+ li{
+ display: list-item;
+ text-align: -webkit-match-parent;
+ }
+ .manifest-item {
+ vertical-align: text-top;
+ margin: 0;
+ border-block-end: 0.0625em solid rgba(255,255,204,.9);
+ }
+
+ /* Responsive Styles */
+ /* @media screen and (max-width: 767px) {
+  .card-container > *:not(.circle-link) ,
+  .terminal {
+    width: 100%;
+  }
+
+  .card:not(.highlight-card) {
+    height: 16px;
+    margin: 8px 0;
+  }
+
+  .card.highlight-card span {
+    margin-left: 72px;
+  }
+} */

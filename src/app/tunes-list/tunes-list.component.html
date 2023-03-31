@@ -1,0 +1,42 @@
+<!-- HARP TUNES -->
+<div class="card-container" *ngIf="showHarpTunesList">
+    <br>
+    <button (click)="showTuneInfo(urlHarpSet); isFirstButtonClicked = true;">The Blooming Meadows </button>
+
+    <div *ngIf = "harp_Tune != ''; isFirstButtonClicked"> 
+      <button (click)="showTuneInfo(harp_Tune)">{{ harpName }}</button>
+    </div>
+    <div *ngIf="showHarpInfo" >
+        <br>
+        <app-tune-card [tuneDetails]="harpTuneDetails" [starIdPrefix]="'harp-'" [tuneNotes]="harpNotes"></app-tune-card>
+    </div>
+</div>
+
+<!-- FIDDLE TUNES   -->
+<div class="card-container" *ngIf="showFiddleTunesList">
+  <br>
+    <button (click)="showTuneInfo(urlFiddleSet)"> Cooley's </button>
+      
+  <div *ngIf = "fiddle_Tune != ''"> 
+    <button (click)="showTuneInfo(fiddle_Tune)">{{ fiddleName }}</button>
+  </div>
+
+  <div *ngIf="showFiddleInfo">
+    <br>
+    <app-tune-card [tuneDetails]="fiddleTuneDetails" [starIdPrefix]="'fiddle-'" [tuneNotes]="fiddleNotes"></app-tune-card>
+  </div>
+</div>
+
+<!-- ACCORDION TUNES   -->
+<div class="card-container" *ngIf="showAccordionTunesList">
+  <br>
+  <button (click)="showTuneInfo(urlAccordionSet)"> The Hole in the Hedge </button>
+  
+  <div *ngIf = "accordion_Tune != ''"> 
+    <button (click)="showTuneInfo(accordion_Tune)">{{ accordionName }}</button>
+  </div>
+    <div *ngIf="showAccordionInfo">
+      <br>
+      <app-tune-card [tuneDetails]="accordionTuneDetails" [starIdPrefix]="'accordion-'" [tuneNotes]="accordionNotes"></app-tune-card>
+    </div>
+</div>

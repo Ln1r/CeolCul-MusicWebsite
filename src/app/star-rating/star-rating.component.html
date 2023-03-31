@@ -1,0 +1,85 @@
+<!-- star-Rating.Component.html -->
+<div class="star-rating">
+    <div class="stars-container">
+      <span *ngFor="let rating of [1, 2, 3, 4, 5]"
+            class="star"
+            [class.active]="rating <= currentRating"
+            (click)="handleClick(rating)">
+        &#9733;
+      </span>
+    </div>
+<div class="rating-txt">
+    <p *ngIf="ratings.length == 0">Accuracy rating: 0</p>
+    <p *ngIf="ratings.length > 0">Accuracy rating: {{ calculateAverageRating() }}</p>
+</div>
+<hr style="border:3px solid #f1f1f1">
+</div> 
+
+<div class="row" *ngIf="ratings.length != 0">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container five-star">
+      <div class="bar" [ngStyle]="{
+          'background-color': chosenRates[4] > 0 ? '#0074D9' : 'white', 
+          'height.px': 16, 'width.%': (chosenRates[4] / ratings.length) * 100 }"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>{{ chosenRates[4] }}</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container four-star">
+      <div class="bar" [ngStyle]="{ 
+          'background-color': chosenRates[3] > 0 ? '#2ECC40' : 'white', 
+          'height.px': 16, 'width.%': (chosenRates[3] / ratings.length) * 100 }"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>{{ chosenRates[3] }}</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container three-star">
+      <div class="bar" [ngStyle]="{ 
+          'background-color': chosenRates[2] > 0 ? '#FFDC00' : 'white', 
+          'height.px': 16, 'width.%': (chosenRates[2] / ratings.length) * 100 
+      }"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>{{ chosenRates[2] }}</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container two-star">
+      <div class="bar" [ngStyle]="{
+          'background-color': chosenRates[1] > 0 ? '#FF851B' : 'white', 
+          'height.px': 16, 'width.%': (chosenRates[1] / ratings.length) * 100 }"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>{{ chosenRates[1] }}</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container one-star">
+      <div class="bar" [ngStyle]="{ 
+          'background-color': chosenRates[0] > 0 ? '#FF4136' : 'white', 
+          'height.px': 16, 'width.%': (chosenRates[0] / ratings.length) * 100 }"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>{{ chosenRates[0] }}</div>
+  </div>
+</div>

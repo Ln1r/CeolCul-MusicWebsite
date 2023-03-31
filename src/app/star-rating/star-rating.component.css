@@ -1,0 +1,66 @@
+.star-rating {
+    display: flex;
+    align-items: center;
+    color: gray;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .star {
+    font-size: 2rem;
+    margin-right: 5px;
+  }.star.active {
+    color: gold;
+  }
+
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial;
+    margin: 0 auto; /* Center website */
+    max-width: 800px; /* Max width */
+    padding: 20px;
+  }
+  
+  /* Three column layout */
+  .side {
+    float: left;
+    width: 15%;
+    margin-top:5px;
+  }
+  
+  .middle {
+    margin-top:5px;
+    float: left;
+    width: 60%;
+  }
+  
+  /* Place text to the right */
+  .right {
+    text-align: right;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .bar {
+    height: 100%;
+    background-color: white;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  /* Responsive layout - make the columns stack on top of each other instead of next to each other */
+  @media (max-width: 400px) {
+    .side, .middle {
+      width: 100%;
+    }
+    .right {
+      display: none;
+    }
+  }

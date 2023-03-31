@@ -1,0 +1,41 @@
+<div class="form-header"><h2>Add Tune</h2></div>
+<form (submit)="addTune(selectedTune, selectedInstrument, selectedNotes)">
+  <div class = "form-group">
+    <label for="name">Tune Name:</label><br>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter tune name" 
+      [(ngModel)]="selectedTune" required #tuneName>
+    <button type="button" (click)="searchTunes(tuneName.value)">Search Tunes</button>
+
+    <div class="list-group">
+      <ul *ngIf="!showSelectedTune && filteredTunes && filteredTunes.length">
+        <li *ngFor="let tune of filteredTunes" (click)="selectTune(tune)">
+              <b>{{ tune }}</b>
+        </li>
+      </ul>
+      <ul *ngIf="showSelectedTune">
+        <li>{{ selectedTune }}</li>
+          <ul *ngIf="!showSelectedNotes && tuneNotations && tuneNotations.length">
+            <li *ngFor="let notes of tuneNotations" (click)="selectNotations(notes)">
+                {{ notes }}
+            </li>
+          </ul>
+        <div *ngIf="showSelectedNotes">
+              {{ selectedNotes }}
+        </div>
+      </ul>
+    </div>
+  </div>
+
+    <div class="form-group">
+        <label for="instrumentSelect">Select Instrument:</label>
+        <select class="form-control" id="instrumentSelect" name="instrument" [(ngModel)]="selectedInstrument">
+          <option value="">Select an instrument</option>
+          <option value="accordion">Accordion</option>
+          <option value="fiddle">Fiddle</option>
+          <option value="harp">Harp</option>
+        </select>
+        <br>
+      </div>
+    
+  <button type="submit" class="btn btn-primary" [disabled]="!selectedTune || !selectedInstrument">Add Tune</button><br>
+</form>

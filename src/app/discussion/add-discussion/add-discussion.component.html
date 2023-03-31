@@ -1,0 +1,16 @@
+<div class="add-discussion">
+  <div class="form-header"><h2>Add Discussion</h2></div>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Title</label><br>
+      <input type="text" id="title" name="title" [(ngModel)]="newDiscussion.title" required><br>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label><br>
+      <textarea id="description" name="description" [(ngModel)]="newDiscussion.description" required></textarea>
+    </div>
+<br>
+    <button type="submit">Add Discussion</button>
+  </form>
+</div>

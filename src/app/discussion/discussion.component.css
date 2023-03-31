@@ -1,0 +1,55 @@
+button{
+  padding: 8px;
+  margin-left: 10px;
+  background-color: #fc3;
+  border-radius: 5px 5px 5px 5px;
+} button:hover{
+  opacity: 0.8;
+}
+
+.discussion-row {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between;
+}.discussion-col{
+  flex: 1 1 30%;
+  margin:10px;
+  width: calc(50% - 20px);
+  margin-bottom: 20px;
+}
+
+.card {
+  width: auto;
+  border: 1px solid #333;
+  flex-basis: calc(30% - 10px);
+  /* margin-bottom: 20px; */
+  padding: 10px;
+  border-radius: 5px;
+  background-color:white;
+  /* background-color: #fc3; */
+}
+.card h3 {
+  padding: 15px;
+  background-color: teal;
+  color: white;
+  border-radius: 5px 5px;
+  text-align: center;
+  margin-top: 0;
+  font-size: 20px;
+  word-wrap: break-word;
+}
+.card p {
+  border: 1px solid #fc3;
+  border-radius: 5px 5px;
+  padding: 10px;
+  margin-bottom: 3px;
+  font-size: 16px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+ol{
+  border: 1px solid #fc3;
+  border-radius: 5px 5px;
+  font-size: 15px;
+  word-wrap: break-word;
+}

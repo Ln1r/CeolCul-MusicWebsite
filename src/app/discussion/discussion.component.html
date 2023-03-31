@@ -1,0 +1,27 @@
+<div class="discussion-row"  *ngIf="discussions.length > 0">
+  <div class="discussion-col" *ngFor="let discussion of discussions">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">{{ discussion.title }}</h3>
+        {{ discussion.timestamp | date: 'MMM d, y h:mm a'}}
+        <p class="card-text">{{ discussion.description }}</p>
+
+        <button (click)="toggleComments(discussion)">{{ discussion.showComments ? 'Hide comments' : 'Show comments' }}</button>
+        <div *ngIf="discussion.showComments">
+          <ol>
+            <li *ngFor="let comment of discussion.comments">{{ comment.text }}</li>
+          </ol>
+          <form #commentForm="ngForm" (submit)="addComment(discussion, commentForm); commentForm.reset()">
+            <input type="text" placeholder="Add a Comment" [(ngModel)]="commentText" name="commentText" required>
+          
+            <button type="submit">Add comment</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="discussions.length === 0">
+  <p style="text-align:center">No discussions found.</p>
+</div>
