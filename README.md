@@ -1,6 +1,7 @@
 # Music Website: CeolCul
 
-For my final year project I was tasked with making a basic updated Irish Traditional music site, similar to TheSession.org
+For my final year project I was tasked with making a basic updated Irish Traditional music site, similar to TheSession.org.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
 
 ## Development server
